@@ -1,0 +1,5 @@
+jdk:
+  - openjdk18
+install:
+  - java -version
+  - mvn install
