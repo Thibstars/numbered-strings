@@ -32,7 +32,7 @@
     <description>Utilities for grammatically numbered Strings.</description>
 
     <properties>
-        <lombok.version>1.18.24</lombok.version>
+        <lombok.version>1.18.26</lombok.version>
 
         <junit.jupiter.version>5.9.0</junit.jupiter.version>
         <junit.platform.commons.version>1.9.0</junit.platform.commons.version>
