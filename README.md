@@ -8,7 +8,11 @@ This library introduces the `NumberedString` class which comes with utility meth
 
 Example:
 ````java
-String itemString = NumberedString.format("Are you sure you'd like to delete %s %s?", selectedItems.size(), "item", "items");
+String itemString = NumberedString.format(
+        "Are you sure you'd like to delete %s %s?", 
+        selectedItems.size(), 
+        "item", "items"
+        );
 ````
 
 ## Installation
