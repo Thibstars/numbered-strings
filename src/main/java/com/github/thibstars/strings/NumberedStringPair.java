@@ -23,7 +23,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * A String represented in both of its' grammatically numbered forms.
+ * A String represented in both of its grammatically numbered forms.
  *
  * @author Thibault Helsmoortel
  */
