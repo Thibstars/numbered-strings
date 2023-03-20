@@ -25,7 +25,7 @@
 
     <groupId>com.github.thibstars</groupId>
     <artifactId>numbered-strings</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
 
     <packaging>jar</packaging>
 
