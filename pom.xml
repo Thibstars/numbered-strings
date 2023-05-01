@@ -34,7 +34,7 @@
     <properties>
         <lombok.version>1.18.26</lombok.version>
 
-        <junit.jupiter.version>5.9.2</junit.jupiter.version>
+        <junit.jupiter.version>5.9.3</junit.jupiter.version>
         <junit.platform.commons.version>1.9.2</junit.platform.commons.version>
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.0.0-M3</maven.surefire.plugin.version>
