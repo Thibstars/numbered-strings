@@ -48,7 +48,7 @@ class NumberedStringTest {
 
         String result = NumberedString.getNumberedString(2, singularForm, pluralForm);
 
-        Assertions.assertEquals(pluralForm, result, "Result must match singular form.");
+        Assertions.assertEquals(pluralForm, result, "Result must match plural form.");
     }
 
     @DisplayName("Should correctly format String")
