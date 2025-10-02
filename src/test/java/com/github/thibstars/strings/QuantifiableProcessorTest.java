@@ -1,5 +1,7 @@
 package com.github.thibstars.strings;
 
+import java.util.Map;
+import java.util.Optional;
 import lombok.Data;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,6 +10,17 @@ import org.junit.jupiter.api.Test;
  * @author Thibault Helsmoortel
  */
 class QuantifiableProcessorTest {
+
+    @Test
+    void shouldProcessAll() {
+        TestClass object = new TestClass();
+        object.setAmountOfPotatoes(1);
+        object.setAmountOfPandas(2);
+        Map<String, Optional<String>> result = QuantifiableProcessor.process(object);
+
+        Assertions.assertEquals("potato", result.get("amountOfPotatoes").orElseThrow(), "Result must match singular form.");
+        Assertions.assertEquals("pandas", result.get("amountOfPandas").orElseThrow(), "Result must match plural form.");
+    }
 
     @Test
     void shouldGetSingularNumberedString() throws NoSuchFieldException, IllegalAccessException {
@@ -50,6 +63,9 @@ class QuantifiableProcessorTest {
 
         @Quantifiable(singularForm = "potato", pluralForm = "potatoes")
         private Integer amountOfPotatoes;
+
+        @Quantifiable(singularForm = "panda", pluralForm = "pandas")
+        private Integer amountOfPandas;
 
         private int notAnnotatedField;
 

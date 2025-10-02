@@ -1,8 +1,11 @@
 package com.github.thibstars.strings;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Processor to process fields annotated with {@link Quantifiable}.
@@ -13,6 +16,19 @@ public class QuantifiableProcessor {
 
     private QuantifiableProcessor() {
         // Hide otherwise publicly available default constructor
+    }
+    
+    public static Map<String, Optional<String>> process(Object object) {
+        Objects.requireNonNull(object, "Object cannot be null");
+        return Arrays.stream(object.getClass().getDeclaredFields())
+                .map(field -> {
+                    try {
+                        return Map.entry(field.getName(), process(object, field));
+                    } catch (IllegalAccessException e) {
+                        return Map.entry(field.getName(), Optional.<String>empty());
+
+                    }
+                }).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public static Optional<String> process(Object object, String fieldName) throws IllegalAccessException, NoSuchFieldException {
