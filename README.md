@@ -1,4 +1,4 @@
-# Numbered Strings [![](https://jitpack.io/v/Thibstars/numbered-strings.svg)](https://jitpack.io/#Thibstars/numbered-strings) [![](https://jitci.com/gh/Thibstars/numbered-strings/svg)](https://jitci.com/gh/Thibstars/numbered-strings)
+# Numbered Strings [![](https://jitpack.io/v/Thibstars/numbered-strings.svg)](https://jitpack.io/#Thibstars/numbered-strings)
 
 
 Utilities for grammatically numbered Strings.
