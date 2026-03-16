@@ -32,7 +32,7 @@
     <description>Utilities for grammatically numbered Strings.</description>
 
     <properties>
-        <lombok.version>1.18.42</lombok.version>
+        <lombok.version>1.18.44</lombok.version>
 
         <junit.jupiter.version>6.0.0</junit.jupiter.version>
         <maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
